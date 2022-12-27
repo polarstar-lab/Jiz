@@ -3,6 +3,7 @@ const Plugin = require('svg-sprite-loader/plugin')
 
 module.exports = {
   lintOnSave: false,
+  publicPath: '/Jiz/',
   chainWebpack: (config) => {
     const dir = path.resolve(__dirname, 'src/assets/icons')
 
