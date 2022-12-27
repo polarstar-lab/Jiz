@@ -17,6 +17,10 @@ jobs:
 
       - name: Build project
         run: yarn && yarn build
+      
+      - name: Deploy
+        uses: Jiz/actions-gh-pages@v3
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          publish_dir: ./dist/
 
-      - name: Install COS
-        run: sudo pip install coscmd
